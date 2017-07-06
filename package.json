@@ -1,0 +1,17 @@
+{
+  "name": "electron-music-box",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:IainIsCreative/electron-music-box.git",
+  "author": "Iain <iainmacdonald16@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "electron": "^1.6.11",
+    "johnny-five": "^0.11.3",
+    "menubar": "^5.2.3"
+  },
+  "devDependencies": {
+    "electron-packager": "^8.7.2",
+    "electron-prebuilt": "^1.4.13"
+  }
+}
