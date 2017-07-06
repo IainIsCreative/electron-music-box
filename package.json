@@ -1,7 +1,7 @@
 {
   "name": "electron-music-box",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "main.js",
   "repository": "git@github.com:IainIsCreative/electron-music-box.git",
   "author": "Iain <iainmacdonald16@gmail.com>",
   "license": "MIT",

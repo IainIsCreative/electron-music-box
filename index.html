@@ -3,8 +3,66 @@
   <head>
     <meta charset="utf-8">
     <title>Hello World!</title>
+    <script>require('./index');</script>
+    <style>
+
+      * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        color: #fff;
+        padding: 10px 5px 5px;
+      }
+
+      .app {
+        position: relative;
+        background: #33eeaa;
+        padding: 2em;
+        border-radius: 4px;
+        height: calc(100vh - 25px);
+        text-align: center;
+        border: 1px solid #007755;
+        z-index: 0;
+      }
+
+      .app::before {
+        content: '';
+        position: absolute;
+        top: -9px;
+        left: 50%;
+        margin-left: -10px;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #33eeaa;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        z-index: -5;
+      }
+
+      .app::after {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 50%;
+        margin-left: -11px;
+        width: 0;
+        height: 0;
+        border-bottom: 10px solid #007755;
+        border-left: 11px solid transparent;
+        border-right: 11px solid transparent;
+        z-index: -10;
+      }
+
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
+    <div class="app">
+      <h1>Hello World!</h1>
+    </div>
   </body>
 </html>
