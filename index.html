@@ -30,7 +30,7 @@
         z-index: 0;
       }
 
-      .app::before {
+      .platform-darwin .app::before {
         content: '';
         position: absolute;
         top: -9px;
@@ -44,7 +44,7 @@
         z-index: -5;
       }
 
-      .app::after {
+      .platform-darwin .app::after {
         content: '';
         position: absolute;
         top: -10px;
@@ -62,7 +62,40 @@
   </head>
   <body>
     <div class="app">
-      <h1>Hello World!</h1>
+      <header class="masthead">
+        <h1>ElectroBox</h1>
+      </header>
+
+      <main class="app-content">
+        <ul class="app-controls" id="playlist">
+
+          <li>
+            <h2>Super Mario</h2>
+            <button id="super-mario" data-song="super-mario" data-playing="false">Play</button>
+          </li>
+          <li>
+            <h2>Star Wars</h2>
+            <button id="star-wars" data-song="star-wars" data-playing="false">Play</button>
+          </li>
+          <li>
+            <h2>Never Gonna Give You Up</h2>
+            <button id="rick-roll" data-song="rick-roll" data-playing="false">Play</button>
+          </li>
+          <li>
+            <h2>Nyan Cat</h2>
+            <button id="nyan-cat" data-song="nyan-cat" data-playing="false">Play</button>
+          </li>
+          <li>
+            <h2>Tetris</h2>
+            <button id="tetris" data-song="tetris" data-playing="false">Play</button>
+          </li>
+
+        </ul>
+      </main>
+
+      <footer class="content-information">
+        <a href="#">An Iain is Creative Project</a>
+      </footer>
     </div>
   </body>
 </html>
