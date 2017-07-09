@@ -4,13 +4,15 @@ const { Server } = require('http');
 const socketIO = require('socket.io');
 const songs = require('j5-songs');
 
+const config = require('./config');
+
 const app = express();
 const http = Server(app);
 const io = socketIO.listen(http);
 
 const board = new Board();
 
-http.listen(3000, () => {
+http.listen(config.port, () => {
   console.log('Server Running');
 });
 
@@ -24,6 +26,8 @@ board.on('ready', function() {
 
     client.on('join', handshake => {
       io.emit('robot-connected', 'Robot Connected');
+
+      console.log(handshake);
     });
 
     client.on('play-song', (song) => {
