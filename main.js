@@ -4,7 +4,7 @@ const path = require('path');
 let win = undefined;
 let tray;
 
-app.dock.hide();
+// app.dock.hide();
 
 app.on('ready', () => {
   makeTray();

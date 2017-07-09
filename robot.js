@@ -14,20 +14,29 @@ http.listen(3000, () => {
   console.log('Server Running');
 });
 
-io.on('connect', (client) => {
-
-  client.on('join', handshake => {
-    console.log(handshake);
-  })
-
-});
-
 board.on('ready', function() {
 
   console.log('board ready');
 
   const buzzer = new Piezo(3);
 
-  buzzer.play(songs.load('never-gonna-give-you-up'));
+  io.on('connect', (client) => {
+
+    client.on('join', handshake => {
+      io.emit('robot-connected', 'Robot Connected');
+    });
+
+    client.on('play-song', (song) => {
+      buzzer.stop();
+      // buzzer.off();
+      buzzer.play(songs.load(song));
+    });
+
+    client.on('stop-song', () => {
+      buzzer.stop();
+      buzzer.off();
+    });
+
+  });
 
 });
