@@ -1,4 +1,12 @@
 const { ipcRenderer } = require('electron');
+const socketIOClient = require('socket.io-client');
+
+const io = socketIOClient('http://localhost:3000');
+
+io.on('connect', () => {
+  console.log('client connecting...');
+  io.emit('join', 'Client Connected');
+});
 
 const additionaClasses = [
   `platform-${process.platform}`,
@@ -7,6 +15,8 @@ const additionaClasses = [
 document.addEventListener('DOMContentLoaded', () => {
   document.body.classList.add(additionaClasses);
   ipcRenderer.send('show-window');
+
+  // console.log(window.)
 
   const playList = document.getElementById('playlist');
 
