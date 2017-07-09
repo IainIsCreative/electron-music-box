@@ -5,10 +5,18 @@
   "repository": "git@github.com:IainIsCreative/electron-music-box.git",
   "author": "Iain <iainmacdonald16@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "robot": "node ./robot"
+  },
   "dependencies": {
     "electron": "^1.6.11",
+    "express": "^4.15.3",
+    "j5-songs": "^0.0.9",
     "johnny-five": "^0.11.3",
-    "menubar": "^5.2.3"
+    "menubar": "^5.2.3",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
   },
   "devDependencies": {
     "electron-packager": "^8.7.2",

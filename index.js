@@ -36,10 +36,3 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 });
-
-
-const handleClick = () => {
-
-
-
-};
