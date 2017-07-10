@@ -1,6 +1,8 @@
 const { app, BrowserWindow, ipcMain, Tray } = require('electron');
 const path = require('path');
 
+const config = require('./config');
+
 // Set up Tray and Window variables
 let win;
 let tray;
