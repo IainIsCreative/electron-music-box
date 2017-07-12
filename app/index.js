@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     io.on('robot-connected', (connected) => {
       console.log(connected);
       document.getElementById('loading-app').innerHTML = 'Music Box Connected!';
+      document.getElementById('loading-app').classList.add('app-loading--success');
     });
   });
 
@@ -109,6 +110,12 @@ document.addEventListener('DOMContentLoaded', () => {
             otherPlayButton.innerHTML = 'Play';
           }
         }
+
+        // When the song ends, change the current button's label
+        io.on('song-ended', () => {
+          playButton.innerHTML = 'Play';
+          playing = false;
+        });
       }
     });
   }

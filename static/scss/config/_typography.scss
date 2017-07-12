@@ -1,0 +1,50 @@
+/**
+ *
+ * Typography Configuration
+ *
+ * Please keep all typographical styles at this level.
+ * It is also important to keep all type styles out of this file as well.
+ * This is merely a configuration file.
+ *
+ */
+
+/**
+ *
+ * Typeface variables
+ *
+ */
+$sans-serif-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
+
+$body-copy: $sans-serif-family;
+
+/**
+ * Type setting variables
+ */
+$root-font-size: 16 !default; //Note: It may not be a good idea to change this.
+
+/**
+ *
+ * Set Body type sizes per breakpoint
+ *
+ * Each breakpoint requires a font size and line height
+ * This is necessary for headings to inherit from on each breakpoint
+ *
+ */
+$body-type: (14, 18);
+
+/**
+ *
+ * Heading Sizes
+ *
+ * Headings are set for the base breakpoint i.e. mobile if it's mobile first
+ * Each heading requires a font size, line height, and bottom margin
+ * Add as many headings as you like
+ *
+ */
+$headings: (
+	a-head: (20, 24, 24),
+	b-head: (18, 22, 22),
+	c-head: (28, 32, 25),
+);

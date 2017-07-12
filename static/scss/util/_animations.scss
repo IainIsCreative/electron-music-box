@@ -1,0 +1,42 @@
+@keyframes fade-out {
+
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    transform: scale(2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  90% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+
+  }
+}
+
+
+@keyframes fade-in {
+
+  0% {
+    position: static;
+    top: 0;
+    left: 0;
+  }
+
+  90% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}

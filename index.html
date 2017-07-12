@@ -2,104 +2,86 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello World!</title>
+    <title>ElectroBox</title>
     <script>require('./app/index');</script>
-    <style>
-
-      * {
-        margin: 0;
-        padding: 0;
-        border: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        font-family: "Avenir", "Helvetica Neue", Helvetica, Arial, sans-serif;
-        color: #fff;
-        padding: 10px 5px 5px;
-      }
-
-      .app {
-        position: relative;
-        background: #33eeaa;
-        padding: 2em;
-        border-radius: 4px;
-        height: calc(100vh - 25px);
-        text-align: center;
-        border: 1px solid #007755;
-        z-index: 0;
-      }
-
-      .platform-darwin .app::before {
-        content: '';
-        position: absolute;
-        top: -9px;
-        left: 50%;
-        margin-left: -10px;
-        width: 0;
-        height: 0;
-        border-bottom: 10px solid #33eeaa;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        z-index: -5;
-      }
-
-      .platform-darwin .app::after {
-        content: '';
-        position: absolute;
-        top: -10px;
-        left: 50%;
-        margin-left: -11px;
-        width: 0;
-        height: 0;
-        border-bottom: 10px solid #007755;
-        border-left: 11px solid transparent;
-        border-right: 11px solid transparent;
-        z-index: -10;
-      }
-
-    </style>
+    <link rel="stylesheet" href="dist/style.css">
   </head>
   <body>
     <div class="app">
-      <header class="masthead">
-        <h1>ElectroBox</h1>
-      </header>
 
-      <main class="app-content">
-        <div id="loading-app">
-          Connecting to robot...
-        </div>
+      <div id="loading-app" class="app-loading">
+        Connecting to robot...
+      </div>
 
-        <ul class="app-controls" id="playlist">
+      <div class="app-central">
+        <header class="masthead">
+          <h1>ElectroBox</h1>
+        </header>
 
-          <li>
-            <h2>Super Mario</h2>
-            <button data-song="mario-fanfare">Play</button>
-          </li>
-          <li>
-            <h2>Star Wars</h2>
-            <button data-song="starwars-theme">Play</button>
-          </li>
-          <li>
-            <h2>Never Gonna Give You Up</h2>
-            <button data-song="never-gonna-give-you-up">Play</button>
-          </li>
-          <li>
-            <h2>Nyan Cat</h2>
-            <button data-song="nyan-melody">Play</button>
-          </li>
-          <li>
-            <h2>Tetris</h2>
-            <button data-song="tetris-theme">Play</button>
-          </li>
+        <main class="app-content">
 
-        </ul>
-      </main>
+          <ul class="playlist app-controls block-hidden" id="playlist">
 
-      <footer class="content-information">
-        <a href="#">An Iain is Creative Project</a>
-      </footer>
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Super Mario</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button data-song="mario-fanfare">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Star Wars</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button data-song="starwars-theme">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Never Gonna Give You Up</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button data-song="never-gonna-give-you-up">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Nyan Cat</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button data-song="nyan-melody">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Tetris</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button data-song="tetris-theme">Play</button>
+              </div>
+            </li>
+
+          </ul>
+        </main>
+
+        <footer class="content-information">
+          <small>
+            <a href="https://patreon.com/IainIsCreative">An Iain is Creative Project</a>
+            <p></p>
+          </small>
+        </footer>
+      </div>
     </div>
   </body>
 </html>

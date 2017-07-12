@@ -1,0 +1,99 @@
+/**
+ *
+ * Text Smoothing Mixin
+ *
+ * Useful for font antialiasing.
+ *
+ * @param {bool} $smoothing - set to true as a default, but can be set to false
+ * to remove anti-aliasing on an element.
+ *
+ */
+@mixin text-smoothing($smoothing: true) {
+	@if not $smoothing {
+		-moz-osx-font-smoothing: auto;
+		-webkit-font-smoothing: subpixel-antialiased;
+	} @else {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+	}
+}
+
+/**
+ *
+ * Type Setting Mixin
+ *
+ * Let all your relative size values wash away with this Mixin.
+ * This mixin requires a target value, and a line height that will output a
+ * font-size in rems as a default. In addition, if a context value is given,
+ * the font size will be written in ems instead.
+ *
+ * @require $target
+ * @require $line-height
+ * @param {number} $target - the target font size value
+ * @param {number} $line-height - the line-height value to be output relatively
+ * @param {number} $context - the font size context for the target value to be
+ * calculated into `em` values.
+ *
+ */
+@mixin type-setting($target, $line-height, $context: false) {
+
+	// Check if target is unitless
+    @if not unitless($target) {
+        $target: strip-units($target);
+    }
+
+	// Apply the following CSS if there's a context involved
+	@if $context {
+		@if type-of($context) != number {
+			@warn 'The value for $context is not a number, please try again.';
+		} @else {
+
+			@if not unitless($context) {
+				$context: strip-units($context);
+			}
+
+			font-size: relative-sizing($target, $context);
+		}
+	} @else {
+		font-size: relative-sizing($target);
+	}
+
+    @if not unitless($line-height) {
+		$line-height: strip-units($line-height);
+    }
+	line-height: ($line-height / $target);
+}
+
+
+@mixin heading-generator() {
+
+	$body-reference: body-type-get(1);
+
+	@debug $body-reference;
+
+	@for $i from 1 through length($headings) {
+
+		$selected-heading: nth($headings, $i);
+		$heading-name: nth($selected-heading, 1);
+		$heading-values: nth($selected-heading, 2);
+
+
+		$heading-font-size: nth($heading-values, 1);
+		$heading-line-height: nth($heading-values, 2);
+		$heading-margin: nth($heading-values, 3);
+
+		@if($i <= 6) {
+
+			h#{$i},
+			.#{$heading-name} {
+				@include type-setting($heading-font-size, $heading-line-height, $body-reference);
+			}
+
+		} @else {
+			.#{$heading-name} {
+				@include type-setting($heading-font-size, $heading-line-height, $body-reference);
+			}
+		}
+
+	}
+}

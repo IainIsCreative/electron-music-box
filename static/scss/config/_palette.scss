@@ -1,0 +1,18 @@
+// Color Palette Configuration
+$color-palette: (
+	primary: (
+		base: #86e1ef,
+		light: #d2f9ff,
+		dark: #52b1c3,
+	),
+
+	secondary: (
+		base: #fff,
+	),
+
+	tertiary: (
+		base: #a3d681,
+	),
+);
+
+$color-interval: 10;
