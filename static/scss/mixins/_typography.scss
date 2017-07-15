@@ -69,8 +69,6 @@
 
 	$body-reference: body-type-get(1);
 
-	@debug $body-reference;
-
 	@for $i from 1 through length($headings) {
 
 		$selected-heading: nth($headings, $i);

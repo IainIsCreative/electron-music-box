@@ -1,16 +1,7 @@
-
-
 body {
 	font-family: $body-copy;
 	@include text-smoothing();
 	@include type-setting(body-type-get(1), body-type-get(2));
 }
-
-a {
-	color: get-palette-color('primary', 'dark');
-	text-decoration: none;
-	border-bottom: relative-sizing(1, 18) solid currentColor;
-}
-
 
 @include heading-generator();

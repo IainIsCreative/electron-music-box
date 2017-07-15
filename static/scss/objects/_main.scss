@@ -8,12 +8,53 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  border-top: 1px solid #fff;
+  font-weight: 500;
+  position: relative;
+
+  &::before {
+    content: '';
+    background-image: linear-gradient(to right, get-palette-color(primary) 0, #fff 50%, get-palette-color(primary) 100%);
+    height: 1px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
 
   &__item {
     display: flex;
     height: 50px;
-    border-bottom: 1px solid #fff;
     padding: 10px 0;
+    display: flex;
+    position: relative;
+
+    &::before {
+      content: '';
+      background-image: linear-gradient(to right, get-palette-color(primary) 0, #fff 50%, get-palette-color(primary) 100%);
+      height: 1px;
+
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    &__label {
+      width: 75%;
+      text-align: left;
+      text-shadow: 0 1px 0px get-palette-color(primary, dark);
+    }
+
+    &__button {
+      width: 25%;
+    }
+
+    &__label,
+    &__button {
+      display: inline-flex;
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }
