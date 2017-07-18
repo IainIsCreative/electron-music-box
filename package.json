@@ -6,13 +6,14 @@
   "author": "Iain <iainmacdonald16@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "electron .",
+    "start": "gulp styles && electron .",
     "robot": "node ./robot",
     "styles": "gulp styles",
     "styles-watch": "gulp"
   },
   "dependencies": {
     "electron": "^1.6.11",
+    "electron-reload": "^1.2.1",
     "express": "^4.15.3",
     "j5-songs": "^0.0.9",
     "johnny-five": "^0.11.3",

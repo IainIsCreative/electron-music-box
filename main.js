@@ -1,11 +1,15 @@
 const { app, BrowserWindow, ipcMain, Tray } = require('electron');
 const path = require('path');
-
 const config = require('./config');
 
 // Set up Tray and Window variables
 let win;
 let tray;
+
+// Set up reload for any changes in the app
+require('electron-reload')(__dirname, {
+  electron: require('electron-prebuilt'),
+});
 
 // Remove the app's icon in the dock
 app.dock.hide();
