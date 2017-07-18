@@ -22,6 +22,7 @@ app.on('ready', () => {
 
 // Store the app's tray icon in a variable — required to make the tray.
 const appIcon = path.join(__dirname, 'static/images/tray-icon.png');
+const appIconHighlighted = path.join(__dirname, 'static/images/tray-icon-highlight.png');
 
 /**
  *
@@ -43,6 +44,11 @@ const makeTray = () => {
       win.openDevTools({ mode: 'detach' })
     }
   });
+
+  if (process.platform == 'darwin') {
+    tray.setPressedImage(appIconHighlighted);
+  }
+
 }
 
 /**

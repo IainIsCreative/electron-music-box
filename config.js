@@ -7,7 +7,7 @@
  */
 
 module.exports = {
-  appName: 'Electron Music Box',
+  appName: 'ElectronBox',
   hostName: 'localhost',
   port: 3000,
 }
