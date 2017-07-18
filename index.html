@@ -7,20 +7,20 @@
     <link rel="stylesheet" href="dist/style.css">
   </head>
   <body>
-    <div class="app">
+    <div class="o-app">
 
-      <div id="loading-app" class="app-loading">
-        Connecting to robot...
+      <div id="loading-app" class="f-app-loading">
+        <p id="loading-text" class="c-loading-text">Connecting to robot...</p>
       </div>
 
-      <div class="app-central">
-        <header class="masthead">
-          <h1>ElectroBox</h1>
+      <div class="f-app-main-container" id="main-app">
+        <header class="o-masthead">
+          <img src="static/svgs/logo.svg" class="c-logo">
         </header>
 
-        <main class="app-content">
+        <main class="o-app-content">
 
-          <ul class="playlist app-controls block-hidden" id="playlist">
+          <ul class="playlist app-controls" id="playlist">
 
             <li class="playlist__item">
               <div class="playlist__item__label">
@@ -28,7 +28,7 @@
               </div>
 
               <div class="playlist__item__button">
-                <button data-song="mario-fanfare">Play</button>
+                <button class="c-button" data-song="mario-fanfare">Play</button>
               </div>
             </li>
 
@@ -38,7 +38,7 @@
               </div>
 
               <div class="playlist__item__button">
-                <button data-song="starwars-theme">Play</button>
+                <button class="c-button" data-song="starwars-theme">Play</button>
               </div>
             </li>
 
@@ -48,7 +48,7 @@
               </div>
 
               <div class="playlist__item__button">
-                <button data-song="never-gonna-give-you-up">Play</button>
+                <button class="c-button" data-song="never-gonna-give-you-up">Play</button>
               </div>
             </li>
 
@@ -58,7 +58,7 @@
               </div>
 
               <div class="playlist__item__button">
-                <button data-song="nyan-melody">Play</button>
+                <button class="c-button" data-song="nyan-melody">Play</button>
               </div>
             </li>
 
@@ -68,14 +68,14 @@
               </div>
 
               <div class="playlist__item__button">
-                <button data-song="tetris-theme">Play</button>
+                <button class="c-button" data-song="tetris-theme">Play</button>
               </div>
             </li>
 
           </ul>
         </main>
 
-        <footer class="content-information">
+        <footer class="o-content-information">
           <small>
             <a href="https://patreon.com/IainIsCreative">An Iain is Creative Project</a>
             <p></p>

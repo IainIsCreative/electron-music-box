@@ -41,8 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     io.on('robot-connected', (connected) => {
       console.log(connected);
-      document.getElementById('loading-app').innerHTML = 'Music Box Connected!';
-      document.getElementById('loading-app').classList.add('app-loading--success');
+      document.getElementById('loading-text').innerHTML = 'Music Box Connected!';
+      document.getElementById('loading-app').classList.add('f-app-loading--success');
+      document.getElementById('main-app').classList.add('f-app-main-container--loaded');
     });
   });
 
@@ -89,12 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
     playButton.addEventListener('click', () => {
 
       if (playing) {
-        playButton.innerHTML = 'Play';
         playing = false;
+        playButton.innerHTML = 'Play';
+        playButton.classList.remove('c-button--playing');
         io.emit('stop-song');
       } else {
-        playButton.innerHTML = 'Stop';
         playing = true;
+        playButton.innerHTML = 'Stop';
+        playButton.classList.add('c-button--playing');
         io.emit('play-song', songName);
 
         for(n = 0; n < playListItems.length; n++) {
@@ -103,18 +106,20 @@ document.addEventListener('DOMContentLoaded', () => {
           /**
            *
            * If the item's button is not the current song and has the text
-           * 'Stop', replace the text with 'Play'.
+           * 'Stop', change its appearance back to the initial state.
            *
            */
           if(otherPlayButton.dataset.song != songName && otherPlayButton.innerHTML == 'Stop') {
             otherPlayButton.innerHTML = 'Play';
+            otherPlayButton.classList.remove('c-button--playing');
           }
         }
 
-        // When the song ends, change the current button's label
+        // When the song ends, change the button back to its initial state
         io.on('song-ended', () => {
-          playButton.innerHTML = 'Play';
           playing = false;
+          playButton.innerHTML = 'Play';
+          playButton.classList.remove('c-button--playing');
         });
       }
     });

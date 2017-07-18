@@ -1,0 +1,12 @@
+.c-loading-text {
+  padding-top: 30px;
+  position: relative;
+
+  &__graphic {
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    margin-left: -45px;
+  }
+
+}
