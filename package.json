@@ -17,21 +17,16 @@
     "express": "^4.15.3",
     "j5-songs": "^0.0.9",
     "johnny-five": "^0.11.3",
-    "menubar": "^5.2.3",
     "socket.io": "^2.0.3",
     "socket.io-client": "^2.0.3"
   },
   "devDependencies": {
-    "autoprefixer": "^7.1.2",
     "cssnano": "^3.10.0",
     "electron-packager": "^8.7.2",
     "electron-prebuilt": "^1.4.13",
     "gulp": "^3.9.1",
     "gulp-notify": "^3.0.0",
     "gulp-postcss": "^7.0.0",
-    "gulp-sass": "^3.1.0",
-    "gulp-uncss": "^1.0.6",
-    "normalize.css": "^7.0.0",
-    "postcss-cssnext": "^3.0.2"
+    "gulp-sass": "^3.1.0"
   }
 }
