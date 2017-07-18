@@ -1,3 +1,12 @@
+/**
+ *
+ * Base Button Styles
+ *
+ * Styles for every button component in the project.
+ * Using gradients for the background, with transform styles when the component
+ * is clicked.
+ *
+ */
 .c-button {
   border: 1px solid #053d1f;
   background-image: linear-gradient(to top, #12856b 0, #5ed8a6 75%);
@@ -16,6 +25,17 @@
     outline: 0;
   }
 
+  /**
+   *
+   * Playing modifier
+   *
+   * When the selected item is playing, this modifier class is applied.
+   * Since CSS can't transition background gradients, changing the hue to a
+   * different colour can make it look like the gradient is smoothly changing.
+   * Staturation is applied as I was unsure if the button's `playing` state
+   * looked a bit pink for my liking.
+   *
+   */
   &--playing {
     filter: hue-rotate(-155deg) saturate(120%);
   }

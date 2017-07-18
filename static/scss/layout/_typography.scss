@@ -1,4 +1,6 @@
 body {
+	background: transparent;
+  color: get-palette-color(secondary);
 	font-family: $body-copy;
 	@include text-smoothing();
 	@include type-setting(body-type-get(1), body-type-get(2));

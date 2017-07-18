@@ -53,7 +53,7 @@ const makeTray = () => {
 const makeWindow = () => {
   win = new BrowserWindow({
     width: 300,
-    height: 530,
+    height: 570,
     show: false,
     frame: false,
     resizable: false,

@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "start": "electron .",
-    "robot": "node ./robot"
+    "robot": "node ./robot",
+    "styles": "gulp styles",
+    "styles-watch": "gulp"
   },
   "dependencies": {
     "electron": "^1.6.11",

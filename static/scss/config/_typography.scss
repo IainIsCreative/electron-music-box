@@ -26,10 +26,10 @@ $root-font-size: 16 !default; //Note: It may not be a good idea to change this.
 
 /**
  *
- * Set Body type sizes per breakpoint
+ * Set Body type sizing.
  *
- * Each breakpoint requires a font size and line height
- * This is necessary for headings to inherit from on each breakpoint
+ * Specify global type sizing, via stating the font size and line height, in
+ * that order.
  *
  */
 $body-type: (14, 18);
@@ -38,9 +38,8 @@ $body-type: (14, 18);
  *
  * Heading Sizes
  *
- * Headings are set for the base breakpoint i.e. mobile if it's mobile first
- * Each heading requires a font size, line height, and bottom margin
- * Add as many headings as you like
+ * Much like the body type, specify each heading's font size, line height, and
+ * margin, in that order.
  *
  */
 $headings: (

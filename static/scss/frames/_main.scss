@@ -1,12 +1,21 @@
+/**
+ *
+ * Main Application Frame
+ *
+ * Pseudo-frame for the main application.
+ * This is hidden when the app is connecting to the robot and cannot be used.
+ * Once the app is loaded, it will show the app's controls and make it
+ * accessible for use.
+ *
+ */
 .f-app-main-container {
   opacity: 0;
   transition: opacity 0.3s ease-out 2s;
-  height: 350px;
+  height: 390px;
   pointer-events: none;
   z-index: 5;
 
   &--loaded {
-    clip: initial;
     opacity: 1;
     pointer-events: all;
   }

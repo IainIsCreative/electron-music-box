@@ -9,17 +9,27 @@
   <body>
     <div class="o-app">
 
+      <!-- Loading Frame for static application -->
       <div id="loading-app" class="f-app-loading">
-        <p id="loading-text" class="c-loading-text">Connecting to robot...</p>
+        <p id="loading-text" class="c-loading-text">
+          <span class="c-loading-text__graphic"></span>
+          Connecting to robot...
+        </p>
       </div>
+      <!-- /loading frame -->
 
+      <!-- Main App Container -->
       <div class="f-app-main-container" id="main-app">
+
+        <!-- Masthead -->
         <header class="o-masthead">
           <img src="static/svgs/logo.svg" class="c-logo">
         </header>
+        <!-- /Masthead -->
 
         <main class="o-app-content">
 
+          <!-- Playlist application controls -->
           <ul class="playlist app-controls" id="playlist">
 
             <li class="playlist__item">
@@ -73,14 +83,18 @@
             </li>
 
           </ul>
+          <!-- /Playlist application controls -->
         </main>
 
+        <!-- Footer -->
         <footer class="o-content-information">
           <small>
-            <a href="https://patreon.com/IainIsCreative">An Iain is Creative Project</a>
-            <p></p>
+            <a href="https://github.com/julianduque/j5-songs">j5-songs</a> by <a href="https://twitter.com/julian_duque">Julian Duque</a><br>
+            An <a href="https://patreon.com/IainIsCreative">Iain is Creative</a> Project
           </small>
         </footer>
+        <!-- /Footer -->
+
       </div>
     </div>
   </body>

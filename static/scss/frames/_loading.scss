@@ -1,3 +1,13 @@
+/**
+ *
+ * Loading Frame
+ *
+ * Pseudo-frame for the app while it connects to the robot.
+ * This is absolutely positioned so it's sitting on top of our app while it's
+ * invisible. Also uses flex for placing our frame's content inside the center
+ * of the frame.
+ *
+ */
 .f-app-loading {
   position: absolute;
   top: 0;
@@ -11,7 +21,6 @@
   text-align: center;
   opacity: 1;
   transition: opacity 0.3s ease-out 1s;
-  // position: relative;
   top: 0;
   z-index: 10;
 
