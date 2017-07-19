@@ -1,5 +1,7 @@
 # Electron Music Box App
 
+![Screenshot of the Electron application.](https://raw.githubusercontent.com/IainIsCreative/electron-music-box/develop/static/images/screenshot.jpg)
+
 A fun little prototype that plays music on a Piezo controlled by Electron. It's a small experiment in using Electron
 for building a desktop application to control an Arduino. This is also my first real attempt at making an Electron app.
 
@@ -9,8 +11,8 @@ This application uses a specific structure for the project. This is also a demon
 
 ```
 project
-  ├─—app
-  |   └——index.js
+  ├─-app
+  |   └--index.js
   ├─-dist
   |   └ All processed files i.e. style.css go here
   ├--static
@@ -18,15 +20,15 @@ project
   |   ├--scss
   |   ├--svgs
   |   └--Anything that is a visual, static asset goes in this directory
-  ├─—.gitignore
-  ├─—config.js
-  ├─—gulpfile.js
-  ├─—index.html
-  ├─—LICENSE
-  ├─—main.js
-  ├─—package.json
-  ├─—README
-  └─—robot.js
+  ├--.gitignore
+  ├--config.js
+  ├--gulpfile.js
+  ├--index.html
+  ├--LICENSE
+  ├--main.js
+  ├--package.json
+  ├--README
+  └--robot.js
 ```
 
 At the base of the project, there's specific files like `config.js`, which set up the robot (or rather, server) and its address and port for the app to call back to. `main.js` is the file that is used to run our Electron app, using `index.html` as the app's front end, and `app/index.js` being the front end's JavaScript that interacts with our robot.
@@ -51,7 +53,7 @@ That's...pretty much it really.
 
 Again, this is simply connecting a buzzer to the Arduino. All easy stuff!
 
-
+![Fritzieg Diagram of the Music Box.](https://raw.githubusercontent.com/IainIsCreative/electron-music-box/develop/static/images/piezo-circuit.jpg)
 
 ## Installing
 
