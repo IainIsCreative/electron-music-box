@@ -1,0 +1,30 @@
+@function get-palette-color($color, $lightness: false) {
+	$color-value: false;
+
+    @if map-has-key($color-palette, $color) {
+        @if $lightness {
+            @if map-has-nested-keys($color-palette, $color, $lightness) {
+                $color-value: map-deep-get($color-palette, $color, $lightness);
+            } @else {
+				@warn "Your value #{$lightness} can't be found, check your `$color-palette` settings.";
+            }
+        } @else {
+            @if map-has-nested-keys($color-palette, $color, base) {
+                $color-value: map-deep-get($color-palette, $color, base);
+            } @else {
+				@warn "There is no `base` key in the color #{$color}, check your `$color-palette` settings.";
+            }
+        }
+    } @else {
+		@warn "The color #{$color} does not exist, please check your `$color-palette` settings";
+	}
+
+    @return if($color-value, $color-value, false);
+}
+
+@function scale-color($color-name, $level: 0) {
+    $color: get-palette-color($color-name);
+    $mix-base: if($level < 0, black, white);
+
+    @return mix($mix-base, $color, $level * $color-interval);
+}

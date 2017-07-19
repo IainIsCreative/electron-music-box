@@ -1,0 +1,38 @@
+.o-app {
+  background: get-palette-color(primary);
+  padding: 20px;
+  border-radius: 4px;
+  border: 1px solid get-palette-color(primary, dark);
+  position: relative;
+
+  .platform-darwin & {
+    position: relative;
+    margin: 20px 0 0;
+    z-index: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 50%;
+      margin-left: -20px;
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+    }
+
+    &::before {
+      top: -18px;
+      border-bottom: 20px solid get-palette-color(primary);
+      z-index: 10;
+    }
+
+    &:after {
+      top: -19px;
+      border-bottom: 20px solid get-palette-color(primary, dark);
+      z-index: 5;
+    }
+  }
+
+}

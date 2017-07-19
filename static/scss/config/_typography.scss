@@ -1,0 +1,49 @@
+/**
+ *
+ * Typography Configuration
+ *
+ * Please keep all typographical styles at this level.
+ * It is also important to keep all type styles out of this file as well.
+ * This is merely a configuration file.
+ *
+ */
+
+/**
+ *
+ * Typeface variables
+ *
+ */
+$sans-serif-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+"Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
+
+$body-copy: $sans-serif-family;
+
+/**
+ * Type setting variables
+ */
+$root-font-size: 16 !default; //Note: It may not be a good idea to change this.
+
+/**
+ *
+ * Set Body type sizing.
+ *
+ * Specify global type sizing, via stating the font size and line height, in
+ * that order.
+ *
+ */
+$body-type: (14, 18);
+
+/**
+ *
+ * Heading Sizes
+ *
+ * Much like the body type, specify each heading's font size, line height, and
+ * margin, in that order.
+ *
+ */
+$headings: (
+	a-head: (20, 24, 24),
+	b-head: (18, 22, 22),
+	c-head: (28, 32, 25),
+);

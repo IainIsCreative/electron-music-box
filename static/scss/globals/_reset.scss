@@ -1,0 +1,75 @@
+/**
+ *
+ * Additional CSS Resets
+ *
+ * More resets to add at the start of the project.
+ *
+ */
+
+/**
+ *
+ * Set HTML tag to border-box.
+ *
+ */
+html {
+	box-sizing: border-box;
+}
+
+/**
+ *
+ * Allow any elements to inherit the box-sizing of its parent.
+ * This assures that any child elements will use the same box-sizing method as
+ * its parent element.
+ *
+ */
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+/**
+ *
+ * Responsive Image resetting
+ *
+ */
+img {
+	max-width: 100%;
+	height: auto;
+
+	// Reset image alignment to 'act' as a block.
+	vertical-align: middle;
+}
+
+/**
+ *
+ * Remove Default styles from inputs
+ *
+ * Remove appearance from all inputs,
+ * except checkboxes and radio buttons.
+ *
+ */
+input,
+textarea {
+	appearance: none;
+}
+
+input {
+
+	[type="checkbox"] {
+		appearance: checkbox;
+	}
+
+	[type="radio"] {
+		appearance: radio;
+	}
+}
+
+/**
+ *
+ * Remove margin from figures
+ *
+ */
+figure {
+	margin: 0;
+}

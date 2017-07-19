@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>ElectroBox</title>
+    <script>require('./app/index');</script>
+    <link rel="stylesheet" href="dist/style.css">
+  </head>
+  <body>
+    <div class="o-app">
+
+      <!-- Loading Frame for static application -->
+      <div id="loading-app" class="f-app-loading">
+        <p id="loading-text" class="c-loading-text">
+          <span class="c-loading-text__graphic"></span>
+          Connecting to robot...
+        </p>
+      </div>
+      <!-- /loading frame -->
+
+      <!-- Main App Container -->
+      <div class="f-app-main-container" id="main-app">
+
+        <!-- Masthead -->
+        <header class="o-masthead">
+          <img src="static/svgs/logo.svg" class="c-logo">
+        </header>
+        <!-- /Masthead -->
+
+        <main class="o-app-content">
+
+          <!-- Playlist application controls -->
+          <ul class="playlist app-controls" id="playlist">
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Super Mario</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button class="c-button" data-song="mario-fanfare">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Star Wars</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button class="c-button" data-song="starwars-theme">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Never Gonna Give You Up</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button class="c-button" data-song="never-gonna-give-you-up">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Nyan Cat</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button class="c-button" data-song="nyan-melody">Play</button>
+              </div>
+            </li>
+
+            <li class="playlist__item">
+              <div class="playlist__item__label">
+                <span>Tetris</span>
+              </div>
+
+              <div class="playlist__item__button">
+                <button class="c-button" data-song="tetris-theme">Play</button>
+              </div>
+            </li>
+
+          </ul>
+          <!-- /Playlist application controls -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="o-content-information">
+          <small>
+            <a href="https://github.com/julianduque/j5-songs">j5-songs</a> by <a href="https://twitter.com/julian_duque">Julian Duque</a><br>
+            An <a href="https://patreon.com/IainIsCreative">Iain is Creative</a> Project
+          </small>
+        </footer>
+        <!-- /Footer -->
+
+      </div>
+    </div>
+  </body>
+</html>

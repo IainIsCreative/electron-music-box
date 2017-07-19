@@ -1,0 +1,47 @@
+/**
+ *
+ * Get Body Type
+ *
+ *
+ **/
+@function body-type-get($nth: false) {
+
+	$b: false;
+
+	@if $body-type {
+
+		@if $nth {
+
+			@if nth($body-type, $nth) {
+				$b: nth($body-type, $nth);
+			}
+		} @else {
+			$b: $body-type;
+		}
+	}
+
+	@return if($b, $b, false);
+
+}
+
+@function heading-get($h, $nth: false) {
+
+	@if map-get($headings, $h) {
+		@if $nth {
+
+			@if nth(map-get($headings, $h), $nth) {
+				$heading: nth(map-get($headings, $h), $nth);
+			} @else {
+				@warn 'The corresponding key `#{$nth}` does not exist; check your `$headings` map.';
+			}
+
+		} @else {
+			$heading: map-get($headings, $h);
+		}
+	} @else {
+		@warn 'The heading #{$h} doesn\'t exist in the `$headings` map; please try again.';
+	}
+
+	@return if($heading, $heading, false);
+
+}

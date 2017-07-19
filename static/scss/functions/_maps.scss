@@ -1,0 +1,19 @@
+/**
+ * Map Fetch function for multi-level Sass maps
+ */
+@function map-deep-get($map, $keys...) {
+    @each $key in $keys {
+        $map: map-get($map, $key);
+    }
+    @return if($map, $map, false);
+}
+
+@function map-has-nested-keys($map, $keys...) {
+    @each $key in $keys {
+        @if not map-has-key($map, $key) {
+            @return false;
+        }
+        $map: map-get($map, $key);
+    }
+    @return true;
+}

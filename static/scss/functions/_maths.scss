@@ -1,0 +1,40 @@
+/**
+ *
+ * The Relative Sizing Function
+ *
+ * Accepts two arguments.
+ * $target takes in the target value, which can output in rems as a default.
+ * $context is optional as it can provide a context value to write out the
+ * target value in ems instead.
+ *
+ * @require $target
+ * @param {number} $target - the target number size to be converted into `rem`
+ * @param {number} $context - the value acting as a context to calculate the
+ * target value into `em`.
+ * @return {number}
+ *
+ */
+@function relative-sizing($target, $context: false) {
+    $value: 0;
+
+    // Is the target value not unitless?
+    @if not unitless($target) {
+        $target: strip-units($target);
+    }
+
+    // Is there a context?
+    @if $context {
+
+        // Is the context not unitless?
+        @if not unitless($context) {
+            $context: strip-units($context);
+        }
+
+        $value: ($target / $context) * 1em;
+
+    } @else {
+        $value: ($target / $root-font-size) * 1rem;
+    }
+
+    @return if($value > 0, $value, 0);
+}

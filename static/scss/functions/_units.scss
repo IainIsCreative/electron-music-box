@@ -1,0 +1,27 @@
+/**
+ *
+ * Strip Units function
+ *
+ * Takes any number placed into the function and strips it off any units.
+ *
+ * @require $n
+ * @param {number} $n - A number value with a unit to be stripped
+ * @return {number}
+ *
+ */
+@function strip-units($n) {
+	$r: 0;
+
+	@if type-of($n) == number {
+		@if not unitless($n) {
+			$r: $n / ($n * 0 + 1);
+		} @else {
+			@warn 'The value #{$n} is already unitless!';
+			$r: $n;
+		}
+	} @else {
+		@warn 'The value #{$n} is not a number; try again.';
+	}
+
+	@return if($r, $r, false);
+}

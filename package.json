@@ -1,0 +1,32 @@
+{
+  "name": "electron-music-box",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "git@github.com:IainIsCreative/electron-music-box.git",
+  "author": "Iain <iainmacdonald16@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "gulp styles && electron .",
+    "robot": "node ./robot",
+    "styles": "gulp styles",
+    "styles-watch": "gulp"
+  },
+  "dependencies": {
+    "electron": "^1.6.11",
+    "electron-reload": "^1.2.1",
+    "express": "^4.15.3",
+    "j5-songs": "^0.0.9",
+    "johnny-five": "^0.11.3",
+    "socket.io": "^2.0.3",
+    "socket.io-client": "^2.0.3"
+  },
+  "devDependencies": {
+    "cssnano": "^3.10.0",
+    "electron-packager": "^8.7.2",
+    "electron-prebuilt": "^1.4.13",
+    "gulp": "^3.9.1",
+    "gulp-notify": "^3.0.0",
+    "gulp-postcss": "^7.0.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
