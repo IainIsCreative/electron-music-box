@@ -17,7 +17,7 @@ const board = new Board();
 
 // Begin the server under the specified port
 http.listen(config.port, () => {
-  console.log('Server Running');
+  console.log(`Server Running under *:${config.port}. Remember to run 'yarn start' to run the app.`);
 });
 
 /**
@@ -32,6 +32,7 @@ board.on('ready', function() {
   // Store the Piezo in a constant
   const buzzer = new Piezo(3);
 
+  // If the board is connected and is connected to the client, give a handshake.
   io.on('connect', (client) => {
 
     client.on('join', handshake => {
@@ -55,7 +56,6 @@ board.on('ready', function() {
      */
     client.on('play-song', (song) => {
       buzzer.stop();
-      console.log(`Current song is ${song}`);
       buzzer.play(songs.load(song), (songEnded) => {
         if(songEnded) {
           io.emit('song-ended');
